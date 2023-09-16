@@ -6,7 +6,7 @@
 
         public string Nome { get; set; }
 
-        public string Idade { get; set; }
+        public int Idade { get; set; }
 
         public string Data_de_Nascimento { get; set;}
 
@@ -15,8 +15,7 @@
         public string CPF { get; set;}
 
         public string?  Endereço { get; set;}
+        
 
-
-           
     }
 }
