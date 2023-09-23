@@ -2,7 +2,8 @@
 {
     public class Aluno
     {
-        public int matricula {  get; set; }
+        public int Matricula {  get; set; }
+        public string Plano { get; set; }
 
         public string Nome { get; set; }
 
@@ -11,6 +12,8 @@
         public string Data_de_Nascimento { get; set;}
 
         public string? Sexo { get; set;}
+
+        public int Peso { get; set; }
 
         public string CPF { get; set;}
 
