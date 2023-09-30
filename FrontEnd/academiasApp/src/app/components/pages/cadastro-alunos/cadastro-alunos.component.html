@@ -1,0 +1,41 @@
+<h3>Cadastro de Alunos</h3>
+<p>Preencha os campos para incluir um aluno</p>
+<hr>
+<form>
+  <div class="row mb-2">
+    <div class="col-md-5">
+      <label>Nome do Aluno:</label>
+      <input type="text" class="form-control" placeholder="Digite o Nome Aqui" formControlName="nome">
+    </div>
+
+    <div class="col-md-1">
+      <label>Idade:</label>
+      <input type="text" class="form-control" placeholder="Digite a Idade Aqui" formControlName="idade">
+    </div>
+
+    <div class="col-md-2">
+      <label>CPF:</label>
+      <input type="text" class="form-control" placeholder="Digite o CPF Aqui" formControlName="cpf">
+    </div>
+
+    <div class="col-md-4">
+      <label>E-mail:</label>
+      <input type="text" class="form-control" placeholder="Digite o E-mail Aqui" formControlName="email">
+    </div>
+
+    <div class="row md-2">
+      <div class="col-md-12">
+         <label>Observações:</label>
+         <textarea class="form-control" placeholder="Digite as Observações Aqui." formControlName="observacoes"></textarea>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-mb-12">
+        <input type="submit" class="btn btn-success" value="Realizar Cadastro">
+        <a [routerLink]="['/pages/consulta-alunos']" class="btn btn-primary ms-2">Ir Para a Consulta</a>
+      </div>
+    </div>
+
+  </div>
+</form>
