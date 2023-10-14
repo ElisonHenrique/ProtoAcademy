@@ -1,4 +1,4 @@
-﻿namespace ProtoAcademyAPI.Entities
+﻿namespace Domain.Entities
 {
     public class Aluno
     {

@@ -1,35 +1,37 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProtoAcademyAPI.Entities;
+using Domain.Entities;
+using Domain.Interface;
 
-namespace ProtoAcademyAPI.Controllers
+namespace Domain.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class AlunoController : ControllerBase
 
     {
-        [HttpPost(Name = "PlanoAluno")]
-        public ActionResult PlanoAluno(Aluno VariavelAluno)
+        private readonly IAlunoService _alunoService;
+        public AlunoController(IAlunoService alunoService)
         {
-            string MensagemRetorno;
-         
-
-            if (VariavelAluno.Plano == "P")
-            {
-                MensagemRetorno = "Você é Um Aluno Que Me Traz Alegria";
-            }
-            else if (VariavelAluno.Plano == "PP")
-            {
-                MensagemRetorno = "Você é Um Aluno Que Me Traz Muita Alegria";
-            }
-            else 
-            {
-                MensagemRetorno = "Você é a Alegria em Pessoa , Mas Pagar Que è Bom Nada Em";
-            }
-
-           
-
-            return Ok(MensagemRetorno);
+            _alunoService = alunoService;
         }
+
+        [HttpPost(Name = "CreateAluno")]
+        public ActionResult CreateAluno(Aluno ObjetoAluno)
+        {
+            string Resultado = _alunoService.createAluno(ObjetoAluno);
+
+            return Ok(Resultado);
+
+        }
+
+        [HttpGet("GetAllAlunos")]
+        public ActionResult GetAllAlunos()
+        {
+            var listaAluno = _alunoService.GetAllAlunos();
+
+            return Ok(listaAluno);
+        }
+
     }
 }
+
