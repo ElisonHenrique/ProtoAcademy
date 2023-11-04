@@ -28,9 +28,10 @@ namespace Domain.Controllers
         [HttpGet("GetAllAlunos")]
         public ActionResult GetAllAlunos()
         {
-            
+      
+      var resultado = _alunoService.GetAllAlunos();
 
-            return Ok();
+      return Ok(resultado);
         }
 
     }

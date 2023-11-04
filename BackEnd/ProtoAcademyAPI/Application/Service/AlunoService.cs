@@ -31,25 +31,11 @@ namespace Application.Service
 
         public List<Aluno> GetAllAlunos()
         {
-            var listaAluno = new List<Aluno>();
 
-            var ObjetoAluno = new Aluno();
-            ObjetoAluno.Matricula = 1234;
-            ObjetoAluno.Nome = "Marcelo";
 
-            var ObjetoAluno2 = new Aluno();
-            ObjetoAluno2.Matricula = 12345;
-            ObjetoAluno2.Nome = "Matheus";
+      var resultado = _alunoRepository.GetAll();
 
-            var ObjetoAluno3 = new Aluno();
-            ObjetoAluno3.Matricula = 123456;
-            ObjetoAluno3.Nome = "João";
-
-            listaAluno.Add(ObjetoAluno);
-            listaAluno.Add(ObjetoAluno2);
-            listaAluno.Add(ObjetoAluno3);
-
-            return listaAluno;
-        }
+      return resultado;
+    }
     }
 }
