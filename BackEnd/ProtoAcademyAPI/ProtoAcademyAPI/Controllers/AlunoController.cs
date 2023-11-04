@@ -8,28 +8,29 @@ namespace Domain.Controllers
     [Route("[controller]")]
     public class AlunoController : ControllerBase
 
-    {
-        private readonly IAlunoService _alunoService;
-        public AlunoController(IAlunoService alunoService)
-        {
-            _alunoService = alunoService;
-        }
+  { //para fazer uma injeção de dependencia selecionar a linha private readonly IAlunoService _alunoService; apertar em soluções rapidas e gerar construtor.
+    private readonly IAlunoService _alunoService;
 
-        [HttpPost(Name = "CreateAluno")]
+    public AlunoController(IAlunoService alunoService)
+    {
+      _alunoService = alunoService;
+    }
+
+    [HttpPost(Name = "CreateAluno")]
         public ActionResult CreateAluno(Aluno ObjetoAluno)
         {
-            string Resultado = _alunoService.createAluno(ObjetoAluno);
+            _alunoService.CreateAluno(ObjetoAluno);
 
-            return Ok(Resultado);
+            return Ok(ObjetoAluno);
 
         }
 
         [HttpGet("GetAllAlunos")]
         public ActionResult GetAllAlunos()
         {
-            var listaAluno = _alunoService.GetAllAlunos();
+            
 
-            return Ok(listaAluno);
+            return Ok();
         }
 
     }

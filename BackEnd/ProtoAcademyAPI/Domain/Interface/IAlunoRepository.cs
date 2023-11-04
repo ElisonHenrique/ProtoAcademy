@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Interface
 {
-    public interface IAlunoService
-    {
-        string CreateAluno(Aluno ObjetoAluno);
-        List<Aluno> GetAllAlunos();
-    }
+  public interface IAlunoRepository 
+  {
+    string CreateAluno(Aluno aluno);
+
+    List<Aluno> GetAll();
+  }
 }

@@ -9,7 +9,7 @@ namespace Domain.Interface
 {
     public interface IAlunoService
     {
-        string CreateAluno(Aluno ObjetoAluno);
+        string createAluno(Aluno ObjetoAluno);
         List<Aluno> GetAllAlunos();
     }
 }
