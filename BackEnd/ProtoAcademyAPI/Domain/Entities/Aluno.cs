@@ -17,7 +17,7 @@
 
         public string CPF { get; set;}
 
-        public string?  Endereço { get; set;}
+        public string?  Endereco { get; set;}
         
 
     }

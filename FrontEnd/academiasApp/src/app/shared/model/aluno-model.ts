@@ -1,5 +1,11 @@
-export class Aluno{
+export class Aluno {
   nome: string = '';
   idade: number = 0;
-  observacoes: string = ''
+  datadenascimento: string = '';
+  matricula: number = 0;
+  plano: string = '';
+  sexo: string = '';
+  peso: number = 0;
+  cpf: string = '';
+  endereco: string = '';
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,8 @@ import { CadastroFornecedoresComponent } from './components/pages/cadastro-forne
 import { ConsultaFornecedoresComponent } from './components/pages/consulta-fornecedores/consulta-fornecedores.component';
 import { ConsultaFuncionariosComponent } from './components/pages/consulta-funcionarios/consulta-funcionarios.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule, //Adicionando as configurações das rotas
     FormsModule, //Para utilizar formularios
-    ReactiveFormsModule //Para utilizar formularios reativos
+    ReactiveFormsModule, //Para utilizar formularios reativos
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
